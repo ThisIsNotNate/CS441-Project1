@@ -1,8 +1,7 @@
 package com.example.cs441_helloworld;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -34,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
                     hellos.setText("You have said hello " + hello_count + " time!");
                 else
                     hellos.setText("You have said hello " + hello_count + " times!");
-
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(),R.raw.hello);
+                mp.start();
             }
         });
     }
