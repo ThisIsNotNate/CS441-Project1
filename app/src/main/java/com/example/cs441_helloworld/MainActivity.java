@@ -28,13 +28,13 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView hellos = (TextView)findViewById(R.id.Hello_Count);
+                TextView hellos = findViewById(R.id.Hello_Count);
                 hello_count++;
                 if(hello_count == 1)
                     hellos.setText("You have said hello " + hello_count + " time!");
                 else
                     hellos.setText("You have said hello " + hello_count + " times!");
-                    
+
             }
         });
     }
